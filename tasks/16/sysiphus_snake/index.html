@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Snake Game</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #2c3e50;
+      font-family: Arial;
+    }
+    #gameCanvas {
+      border: 2px solid #ecf0f1;
+      background: #34495e;
+    }
+    #score {
+      color: #ecf0f1;
+      font-size: 2em;
+      margin: 10px;
+    }
+    #startBtn {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      margin: 10px;
+      cursor: pointer;
+
+    #highScore {
+      color: #ecf0f1;
+      font-size: 1.5em;
+      margin: 5px;
+    }
+
+    #pauseBtn {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .paused-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #ecf0f1;
+      font-size: 3em;
+      text-shadow: 2px 2px #2c3e50;
+      display: none;
+    }
+    #bgMusic {
+    display: none; /* Hide the audio controls */
+  }
+  }
+  </style>
+</head>
+<body>
+  <div id="score">Score: 0</div>
+  <div id="highScore">High Score: 0</div>
+  <!-- Add this to index.html (inside <body>) -->
+  <audio id="bgMusic" loop>
+    <source src="song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <button id="pauseBtn">Pause</button>
+  <canvas id="gameCanvas" width="400" height="400"></canvas>
+  <button id="startBtn">Start Game</button>
+  <script src="js/game.js"></script>
+</body>
+</html>
